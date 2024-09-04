@@ -67,6 +67,28 @@
                 border-radius: 15px; /* Rounded corners */
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
             }
+            .drew-image {
+            width: 300px;
+            height: auto; /* Maintains the aspect ratio */
+            border: 5px solid white; /* White border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+            }
+            .image-container {
+            display: flex;
+            justify-content: center; /* Center the images horizontally */
+            gap: 20px; /* Space between the images */
+            }
+
+            .dog-image, .drew-image {
+            width: 300px;
+            height: auto; /* Maintains the aspect ratio */
+            border: 5px solid white; /* White border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+            }
+
+
         </style>
     </head>
     <body>
@@ -86,10 +108,14 @@
             </a>
         </div>
 
-        <h1>Brandon's HTML Website</h1>
+        <h1>Brandon's Website</h1>
         <p>Social Links are on the left, click the button!</p>
         <p>Also, here is Cashew.</p>
-        <img src="Images/dog.jpg" alt="Picture of my dog" class="dog-image">
+        <p>And Drew.</p>
+        <div class="image-container">
+            <img src="Images/dog.jpg" alt="Picture of my dog" class="dog-image">
+            <img src="Images/drew.jpg" alt="Drew" class="drew-image">
+        </div>
         <script>
             function toggleMenu() {
                 document.getElementById('menu').classList.toggle('show');

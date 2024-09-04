@@ -82,13 +82,20 @@
             border-radius: 15px; /* Rounded corners */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
             }
+            .gnomechild-image {
+            width: 300px;
+            height: auto; /* Maintains the aspect ratio */
+            border: 5px solid white; /* White border */
+            border-radius: 15px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+            }
             .image-container {
             display: flex;
             justify-content: center; /* Center the images horizontally */
             gap: 20px; /* Space between the images */
             }
 
-            .dog-image, .drew-image {
+            .dog-image, .drew-image, .gnomechild-image, {
             width: 300px;
             height: auto; /* Maintains the aspect ratio */
             border: 5px solid white; /* White border */
@@ -127,6 +134,7 @@
         <div class="image-container">
             <img src="Images/dog.jpg" alt="Picture of my dog" class="dog-image">
             <img src="Images/drew.jpg" alt="Drew" class="drew-image">
+            <img src="Images/gnomechild.jpg" alt="Gnome Child HD" class="gnomechild-image">
         </div>
         <script>
             function toggleMenu() {

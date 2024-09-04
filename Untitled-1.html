@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <title>Brandon Blades</title>
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                min-height: 100vh;
+                text-align: center;
+                background: linear-gradient(to bottom, #97f3a4, #34bed6); /* Grey gradient */
+                background-attachment: fixed; /* Ensures the gradient stays fixed during scroll */
+            }
+            .menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 250px;
+                background-color: #333;
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            .menu a {
+                color: rgb(39, 216, 207);
+                text-decoration: none;
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid #444;
+            }
+            .menu a:hover {
+                background-color: #575757;
+            }
+            .menu-btn {
+                position: fixed;
+                top: 15px;
+                left: 15px;
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+                border: none;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 15px; /*Rounded Corners*/
+            }
+            .menu-btn:focus {
+                outline: none;
+            }
+            .menu.show {
+                transform: translateX(0);
+            }
+            .social-icon {
+                width: 24px; /* Adjust size as needed */
+                height: 24px; /* Adjust size as needed */
+                margin-right: 10px; /* Space between icon and text */
+                vertical-align: middle; /* Align icon with text */
+            }
+            .dog-image {
+                width: 300px;
+                height: auto; /* Maintains the aspect ratio */
+                border: 5px solid white; /* White border */
+                border-radius: 15px; /* Rounded corners */
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+            }
+        </style>
+    </head>
+    <body>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <div class="menu" id="menu">
+            <a href="https://www.linkedin.com/in/brandonblades-93/" target="_blank">
+                <img src="Images/linkedin.png" alt="LinkedIn" class="social-icon">
+                LinkedIn
+            </a>
+            <a href="https://www.instagram.com/brandonblades.93/" target="_blank">
+                <img src="Images/instagram.png" alt="Instagram" class="social-icon">
+                Instagram
+            </a>
+            <a href="https://x.com/Darexial" target="_blank">
+                <img src="Images/twitter.png" alt="Twitter" class="social-icon">
+                Twitter
+            </a>
+        </div>
+
+        <h1>Brandon's HTML Website</h1>
+        <p>Social Links are on the left, click the button!</p>
+        <p>Also, here is Cashew.</p>
+        <img src="Images/dog.jpg" alt="Picture of my dog" class="dog-image">
+        <script>
+            function toggleMenu() {
+                document.getElementById('menu').classList.toggle('show');
+            }
+
+            document.addEventListener('click', function(event) {
+                var menu = document.getElementById('menu');
+                var menuBtn = document.querySelector('.menu-btn');
+                if (!menu.contains(event.target) && !menuBtn.contains(event.target)) {
+                    menu.classList.remove('show');
+                }
+            });
+        </script>
+    </body>
+</html>

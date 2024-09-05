@@ -103,6 +103,15 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
             }
 
+            .white-box {
+                background-color: white;
+                border: 2px solid #ccc; /* Slightly darker border */
+                border-radius: 15px; /* Rounded corners */
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+                max-width: 600px; /* Optional: Limits the width of the box */
+                margin: 20px auto; /* Centers the box horizontally */
+            }
 
         </style>
     </head>
@@ -137,6 +146,12 @@
             <img src="Images/drew.jpg" alt="Drew" class="drew-image">
             <img src="Images/gnomechild.jpg" alt="Gnome Child HD" class="gnomechild-image">
         </div>
+
+        <div class="white-box">
+        <h1>Test Box</h1>
+        <a href="stars.html">Click here for the Stars Page.</a>
+    </div>
+
         <script>
             function toggleMenu() {
                 document.getElementById('menu').classList.toggle('show');
